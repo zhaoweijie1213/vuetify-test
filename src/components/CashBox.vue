@@ -22,7 +22,7 @@
   onMounted(async () => {
     const app = new PIXI.Application({
       width: 800,
-      height: 400,
+      height: 800,
       backgroundAlpha: 0,
     })
     pixiBox.value!.appendChild(app.view)
@@ -60,7 +60,8 @@
 
     armatureDisplay.visible = true
     armatureDisplay.alpha = 1
-
+    // 缩小动画，倍率为 0.5
+    armatureDisplay.scale.set(0.5)
     armatureDisplay.x = app.renderer.width / 2
     armatureDisplay.y = app.renderer.height / 2
     armatureDisplay.animation.play('box_1_2_en')
