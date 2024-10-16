@@ -1,5 +1,7 @@
 <template>
-  <div ref="pixiBox" />
+  <v-container class="fill-height" fluid>
+    <div ref="pixiBox" class="pixiBox d-flex justify-center align-center" />
+  </v-container>
 </template>
 
 <script lang="ts" setup>
@@ -19,7 +21,7 @@
 
   onMounted(async () => {
     const app = new PIXI.Application({
-      width: 400,
+      width: 800,
       height: 400,
       backgroundAlpha: 0,
     })
@@ -70,3 +72,9 @@
     })
   })
 </script>
+<style scoped>
+.pixiBox{
+  width: 100%;
+  height: 100%;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <RotatingRectangle />
+  <CashBox />
 </template>
 
 <script lang="ts" setup>
